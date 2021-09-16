@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>201819804王程霖canvas</title>
+		<style>
+			canvas{
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="600" height="600" style="border: 1px solid skyblue;"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas")
+			var ctx=c.getContext("2d")
+			ctx.font="20px Arial"
+			ctx.beginPath();
+			ctx.fillStyle="rgb(6,40,90)";
+			ctx.arc(250, 250, 250, 0,2 * Math.PI);
+			ctx.fill();
+			
+			ctx.fillStyle = "rgb(38,99,200)";
+			ctx.beginPath();
+			ctx.arc(250, 300, 200, 0, 2 * Math.PI);
+			ctx.fill();
+			
+			ctx.fillStyle = "rgb(199,202,211)";
+			ctx.beginPath();
+			ctx.arc(250, 350, 150, 0, 2 * Math.PI);
+			ctx.fill();
+							
+			ctx.fillStyle = "rgb(38,99,200)";
+			ctx.beginPath();
+			ctx.arc(250, 400, 100, 0, 2 * Math.PI);
+			ctx.fill();
+			
+			ctx.fillStyle="red";
+			ctx.fillText("R:250",255,60);
+			ctx.fillText("R:200",255,160);
+			ctx.fillText("R:150",255,260);
+			ctx.fillText("R:100",255,400);
+			ctx.stroke();
+		</script>
+	</body>
+</html>
